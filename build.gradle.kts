@@ -4,6 +4,7 @@ import org.spongepowered.plugin.metadata.model.PluginDependency
 plugins {
     `java-library`
     id("org.spongepowered.gradle.plugin") version "2.0.0"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "org.cubeengine.plugin"
@@ -20,7 +21,7 @@ dependencies {
     implementation("io.prometheus:simpleclient_common:$prometheusVersion")
     implementation("io.prometheus:simpleclient_hotspot:$prometheusVersion")
     implementation("io.jaegertracing:jaeger-client:1.7.0")
-    implementation("org.spongepowered:observer:1.0-SNAPSHOT")
+    compileOnly("org.spongepowered:observer:1.0-SNAPSHOT")
 }
 
 sponge {
