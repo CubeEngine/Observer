@@ -50,7 +50,7 @@ sponge {
     }
 }
 
-val javaTarget = 11 // Sponge targets a minimum of Java 8
+val javaTarget = 8
 java {
     sourceCompatibility = JavaVersion.toVersion(javaTarget)
     targetCompatibility = JavaVersion.toVersion(javaTarget)
@@ -62,7 +62,6 @@ java {
 tasks.withType<JavaCompile>().configureEach {
     options.apply {
         encoding = "utf-8"
-        release.set(javaTarget)
     }
 }
 
